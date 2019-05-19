@@ -26,6 +26,6 @@ Where
 
 * country_code is the [ISO 3166 1 alpha 2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements)
 * city_code is the [IATA Code](https://www.iata.org/publications/Pages/code-search.aspx), if your place does not have a nearby airport, you can consider using [W3W](https://what3words.com)
-* project_name in a way that describes it the way
+* project_name in a way that describes what this is about
 * README.md please put that in the language your audience is more akin to read
 
