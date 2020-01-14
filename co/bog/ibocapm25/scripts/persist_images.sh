@@ -15,6 +15,6 @@
 
 GIT_PATH="https://api.github.com/repos/kike-canaries/collected-data/contents/co/bog/ibocapm25/images/"
 curl -L "https://api.browshot.com/api/v1/simple?url=https://aqicn.org/map/bogota/&key=$BROWSHOT_KEY" -o $LOCAL_FILE$AIQCN_FILE
-curl -L "https://api.browshot.com/api/v1/simple?url=http://iboca.ambientebogota.gov.co/mapa&key=$BROWSHOT_KEY" -o $LOCAL_FILE$IBOCA_FILE
+curl -L "https://api.browshot.com/api/v1/simple?url=http://rmcab.ambientebogota.gov.co/home/map&key=$BROWSHOT_KEY" -o $LOCAL_FILE$IBOCA_FILE
 (echo -n '{"message": "Uploaded '; echo $AIQCN_FILE; echo '", "committer": {"name": "'; echo $COMMITER_NAME; echo '", "email": "'; echo $COMMITER_EMAIL; echo '"}, "content": "'; base64 $LOCAL_FILE$AIQCN_FILE; echo '"}') | curl -vvv -X PUT -H "Content-Type: application/json" -H "Authorization: token $AUTH_TOKEN" -d @- $GIT_PATH$AIQCN_FILE
 (echo -n '{"message": "Uploaded '; echo $IBOCA_FILE; echo '", "committer": {"name": "'; echo $COMMITER_NAME; echo '", "email": "'; echo $COMMITER_EMAIL; echo '"}, "content": "'; base64 $LOCAL_FILE$IBOCA_FILE; echo '"}') | curl -vvv -X PUT -H "Content-Type: application/json" -H "Authorization: token $AUTH_TOKEN" -d @- $GIT_PATH$IBOCA_FILE
