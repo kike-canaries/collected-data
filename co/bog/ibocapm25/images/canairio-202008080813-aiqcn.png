@@ -1,0 +1,3 @@
+Can't connect to de3.browshot.com:8083 (Connection refused)
+
+Connection refused at /usr/local/share/perl5/LWP/Protocol/http.pm line 50.
